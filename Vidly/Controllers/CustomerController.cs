@@ -3,6 +3,7 @@ using System.Linq;
 using System.Web.Mvc;
 using Vidly.Models;
 using System.Data.Entity;
+using System;
 
 namespace Vidly.Controllers
 {
@@ -27,7 +28,10 @@ namespace Vidly.Controllers
 
         public ActionResult Details(int Id)
         {
-            Customer customer = _context.Customers.ToList().SingleOrDefault(x => x.Id == Id);
+            Customer customer = _context.Customers.Include(x => x.MembershipType).ToList().SingleOrDefault(x => x.Id == Id);
+
+            DateTime fecha = new DateTime(2022, 4, 10);
+            string test = fecha.ToString("{0:d}");
 
             if (customer == null) return new HttpNotFoundResult();
 

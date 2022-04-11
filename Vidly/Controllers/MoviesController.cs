@@ -2,11 +2,20 @@
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
+using System.Data.Entity;
+using System.Linq;
 
 namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
+        private readonly ApplicationDbContext _context;
+
+        public MoviesController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
         // GET: Movies
         public ActionResult Random()
         {
@@ -28,7 +37,16 @@ namespace Vidly.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var movies = _context.Movies.Include(item => item.Genre);
+
+            return View(movies);
+        }
+
+        public ActionResult Details(int Id)
+        {
+            Movie movie = _context.Movies.Include(item => item.Genre).ToList().SingleOrDefault(item => item.Id == Id);
+
+            return View(movie);
         }
     }
 }

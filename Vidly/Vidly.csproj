@@ -185,10 +185,31 @@
     <Compile Include="Migrations\202204112039116_UpdateMemberShipTypesWithNames.designer.cs">
       <DependentUpon>202204112039116_UpdateMemberShipTypesWithNames.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202204112048452_BirthDateTipeAddedInCustomer.cs" />
+    <Compile Include="Migrations\202204112048452_BirthDateTipeAddedInCustomer.designer.cs">
+      <DependentUpon>202204112048452_BirthDateTipeAddedInCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204112052273_CustomerBirthdateNoIsNullAble.cs" />
+    <Compile Include="Migrations\202204112052273_CustomerBirthdateNoIsNullAble.designer.cs">
+      <DependentUpon>202204112052273_CustomerBirthdateNoIsNullAble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204112129029_GenreAdded.cs" />
+    <Compile Include="Migrations\202204112129029_GenreAdded.designer.cs">
+      <DependentUpon>202204112129029_GenreAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204112130234_AddDataGenre.cs" />
+    <Compile Include="Migrations\202204112130234_AddDataGenre.designer.cs">
+      <DependentUpon>202204112130234_AddDataGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204112202118_ModifyMovieModel.cs" />
+    <Compile Include="Migrations\202204112202118_ModifyMovieModel.designer.cs">
+      <DependentUpon>202204112202118_ModifyMovieModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -236,6 +257,7 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -274,6 +296,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202204112039116_UpdateMemberShipTypesWithNames.resx">
       <DependentUpon>202204112039116_UpdateMemberShipTypesWithNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204112048452_BirthDateTipeAddedInCustomer.resx">
+      <DependentUpon>202204112048452_BirthDateTipeAddedInCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204112052273_CustomerBirthdateNoIsNullAble.resx">
+      <DependentUpon>202204112052273_CustomerBirthdateNoIsNullAble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204112129029_GenreAdded.resx">
+      <DependentUpon>202204112129029_GenreAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204112130234_AddDataGenre.resx">
+      <DependentUpon>202204112130234_AddDataGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204112202118_ModifyMovieModel.resx">
+      <DependentUpon>202204112202118_ModifyMovieModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
